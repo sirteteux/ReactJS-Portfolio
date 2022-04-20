@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import PortfolioList from "../portfolioList/portfolioList";
 import "./portfolio.scss"
 import { featuredPortfolio,
-        webPortfolio,
-        mobilePortfolio,
-        designPortfolio,
-        contentPortfolio
+        htmlPortfolio,
+        cplusPortfolio,
+        csharpPortfolio,
+        javaPortfolio
 } from "../../data";
 
 export default function portfolio() {
@@ -20,20 +20,20 @@ export default function portfolio() {
       title: "Featured",
     },
     {
-      id: "web",
-      title: "Web App",
+      id: "html",
+      title: "HTML/JS",
     },
     {
-      id: "mobile",
-      title: "Mobile App",
+      id: "cplus",
+      title: "C++",
     },
     {
-      id: "design",
-      title: "Design",
+      id: "csharp",
+      title: "C#",
     },
     {
-      id: "content",
-      title: "Content",
+      id: "java",
+      title: "Java",
     },
   ];
 
@@ -42,24 +42,24 @@ export default function portfolio() {
       case "featured":
         setData(featuredPortfolio);
         break;
-      case "web":
-        setData(webPortfolio);
+      case "html":
+        setData(htmlPortfolio);
         break;
-      case "mobile":
-        setData(mobilePortfolio);
+      case "cplus":
+        setData(cplusPortfolio);
         break;
-      case "design":
-        setData(designPortfolio);
+      case "csharp":
+        setData(csharpPortfolio);
         break;
-      case "content":
-        setData(contentPortfolio);
-        break;
+      case "java":
+      setData(javaPortfolio);
+      break;
     }
   }, [selected]);
 
   return (
     <div className="portfolio" id="portfolio">
-        <h1>Portfolio</h1>
+        <h1>Projects</h1>
         <ul>
           {list.map((item) => (
             <PortfolioList
